@@ -1,3 +1,4 @@
+import 'package:firebaseapp/pics/uploadpics.dart';
 import 'package:firebaseapp/services/auth.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,11 @@ class _HomepageState extends State<Homepage> {
           })
         ],
       ),
+      body: Column(children: [
+        FlatButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> UploadImages()));
+        }, child: Text("Go upload pictures"))
+      ],)
     );
   }
 }
